@@ -1,0 +1,8 @@
+export { default as Hero } from './Hero'
+export { default as ProceduresGrid } from './ProceduresGrid'
+export { default as AboutSection } from './AboutSection'
+export { default as StatsSection } from './StatsSection'
+export { default as TestimonialsCarousel } from './TestimonialsCarousel'
+export { default as WhyChooseUs } from './WhyChooseUs'
+export { default as LocationsSection } from './LocationsSection'
+export { default as CTASection } from './CTASection'

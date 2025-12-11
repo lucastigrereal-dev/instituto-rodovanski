@@ -1,0 +1,6 @@
+export { default as LandingHero } from './LandingHero'
+export { default as ProblemSection } from './ProblemSection'
+export { default as SolutionSection } from './SolutionSection'
+export { default as BenefitsGrid } from './BenefitsGrid'
+export { default as FAQAccordion } from './FAQAccordion'
+export { default as FinalCTA } from './FinalCTA'
