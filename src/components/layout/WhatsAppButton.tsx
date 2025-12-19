@@ -19,7 +19,10 @@ export default function WhatsAppButton() {
       <span className="absolute w-full h-full rounded-full bg-whatsapp animate-ping opacity-20"></span>
 
       {/* Tooltip */}
-      <span className="absolute right-full mr-4 bg-navy-900 text-white text-sm px-4 py-2 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-lg">
+      <span 
+        className="absolute right-full mr-4 text-white text-sm px-4 py-2 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-lg"
+        style={{ backgroundColor: '#1B2A4E' }}
+      >
         Fale Conosco
       </span>
     </a>

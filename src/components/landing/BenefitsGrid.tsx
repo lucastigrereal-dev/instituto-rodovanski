@@ -4,6 +4,7 @@ interface Benefit {
   icon: LucideIcon
   title: string
   description: string
+  accentColor?: string
 }
 
 interface BenefitsGridProps {
@@ -17,31 +18,37 @@ const defaultBenefits: Benefit[] = [
     icon: TrendingUp,
     title: 'Aumento Real',
     description: 'De 1 a 4cm de circunferência com resultados visíveis',
+    accentColor: '#D4AF37', // Dourado
   },
   {
     icon: Leaf,
     title: '100% Natural',
     description: 'Aspecto e sensação totalmente naturais',
+    accentColor: '#F9A8D4', // Rosa
   },
   {
     icon: Hand,
     title: 'Sensibilidade Mantida',
     description: 'Zero perda de sensibilidade durante ou após',
+    accentColor: '#D4AF37', // Dourado
   },
   {
     icon: Stethoscope,
     title: 'Sem Cirurgia',
     description: 'Procedimento minimamente invasivo sem cortes',
+    accentColor: '#F9A8D4', // Rosa
   },
   {
     icon: Clock,
     title: 'Recuperação Rápida',
     description: 'Retorne às atividades em poucos dias',
+    accentColor: '#D4AF37', // Dourado
   },
   {
     icon: CalendarCheck,
     title: 'Resultado Duradouro',
     description: 'Efeito que dura de 12 a 24 meses',
+    accentColor: '#F9A8D4', // Rosa
   },
 ]
 
@@ -51,18 +58,18 @@ export default function BenefitsGrid({
   benefits = defaultBenefits,
 }: BenefitsGridProps) {
   return (
-    <section className="py-24 bg-navy-900/50">
+    <section className="py-24" style={{ backgroundColor: 'rgba(27, 42, 78, 0.5)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             {title.split(' ').slice(0, -1).join(' ')}{' '}
-            <span className="text-gold-500">
+            <span style={{ color: '#D4AF37' }}>
               {title.split(' ').slice(-1)[0]}
             </span>
           </h2>
           {subtitle && (
-            <p className="text-navy-300 text-lg max-w-2xl mx-auto">
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: '#9faace' }}>
               {subtitle}
             </p>
           )}
@@ -70,29 +77,39 @@ export default function BenefitsGrid({
 
         {/* Benefits Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {benefits.map((benefit, index) => (
-            <div
-              key={index}
-              className="bg-navy-800 rounded-2xl p-8 border border-gold-500/10 hover:border-gold-500/30 transition-all group"
-            >
-              <div className="flex items-start gap-4">
-                {/* Icon */}
-                <div className="w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center flex-shrink-0 group-hover:bg-gold-500/20 transition-colors">
-                  <benefit.icon className="w-6 h-6 text-gold-500" />
-                </div>
+          {benefits.map((benefit, index) => {
+            const color = benefit.accentColor || '#D4AF37'
+            return (
+              <div
+                key={index}
+                className="rounded-2xl p-8 transition-all group"
+                style={{ 
+                  backgroundColor: '#243469', 
+                  border: `1px solid ${color}15` 
+                }}
+              >
+                <div className="flex items-start gap-4">
+                  {/* Icon */}
+                  <div 
+                    className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 transition-colors"
+                    style={{ backgroundColor: `${color}15` }}
+                  >
+                    <benefit.icon className="w-6 h-6" style={{ color }} />
+                  </div>
 
-                {/* Content */}
-                <div>
-                  <h3 className="font-heading text-lg font-semibold text-white mb-2">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-navy-300 text-sm leading-relaxed">
-                    {benefit.description}
-                  </p>
+                  {/* Content */}
+                  <div>
+                    <h3 className="font-heading text-lg font-semibold text-white mb-2">
+                      {benefit.title}
+                    </h3>
+                    <p className="text-sm leading-relaxed" style={{ color: '#9faace' }}>
+                      {benefit.description}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>

@@ -4,13 +4,27 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 
+ * Paleta de Cores "Ousada Moderna" - Guia Estratégico
+ * Azul Marinho: #1B2A4E
+ * Rosa: #F9A8D4
+ * Dourado: #D4AF37
+ */
+
+:root {
+  --color-navy: #1B2A4E;
+  --color-rose: #F9A8D4;
+  --color-gold: #D4AF37;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
   }
 
   body {
-    @apply bg-navy-950 text-white font-body antialiased;
+    @apply bg-navy-900 text-white font-body antialiased;
+    background-color: #1B2A4E;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -20,15 +34,40 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-gold-500 text-navy-950 font-semibold px-8 py-4 rounded-full
+    @apply bg-gold-500 text-navy-900 font-semibold px-8 py-4 rounded-full
            hover:bg-gold-400 transition-all duration-300 hover:scale-105
            shadow-lg shadow-gold-500/20 inline-flex items-center justify-center;
+    background-color: #D4AF37;
+    color: #1B2A4E;
+  }
+
+  .btn-primary:hover {
+    background-color: #e2c45c;
   }
 
   .btn-secondary {
     @apply border-2 border-gold-500 text-gold-500 font-semibold px-8 py-4 rounded-full
-           hover:bg-gold-500 hover:text-navy-950 transition-all duration-300
+           hover:bg-gold-500 hover:text-navy-900 transition-all duration-300
            inline-flex items-center justify-center;
+    border-color: #D4AF37;
+    color: #D4AF37;
+  }
+
+  .btn-secondary:hover {
+    background-color: #D4AF37;
+    color: #1B2A4E;
+  }
+
+  .btn-rose {
+    @apply bg-rose-400 text-navy-900 font-semibold px-8 py-4 rounded-full
+           hover:bg-rose-300 transition-all duration-300 hover:scale-105
+           shadow-lg shadow-rose-400/20 inline-flex items-center justify-center;
+    background-color: #F9A8D4;
+    color: #1B2A4E;
+  }
+
+  .btn-rose:hover {
+    background-color: #fac1e0;
   }
 
   .btn-whatsapp {
@@ -40,6 +79,17 @@
   .card {
     @apply bg-navy-800 rounded-2xl p-6 border border-gold-500/10
            hover:border-gold-500/30 transition-all duration-300;
+    background-color: #243469;
+    border-color: rgba(212, 175, 55, 0.1);
+  }
+
+  .card:hover {
+    border-color: rgba(212, 175, 55, 0.3);
+  }
+
+  .card-rose {
+    @apply bg-rose-400/10 rounded-2xl p-6 border border-rose-400/20
+           hover:border-rose-400/40 transition-all duration-300;
   }
 
   .container-custom {
@@ -53,21 +103,70 @@
   .text-gradient {
     @apply bg-gradient-to-r from-gold-400 to-gold-600 bg-clip-text text-transparent;
   }
+
+  .text-gradient-rose {
+    @apply bg-gradient-to-r from-rose-300 to-rose-500 bg-clip-text text-transparent;
+  }
+
+  /* Accent colors for the triad */
+  .accent-gold {
+    color: #D4AF37;
+  }
+
+  .accent-rose {
+    color: #F9A8D4;
+  }
+
+  .accent-navy {
+    color: #1B2A4E;
+  }
+
+  .bg-accent-gold {
+    background-color: #D4AF37;
+  }
+
+  .bg-accent-rose {
+    background-color: #F9A8D4;
+  }
+
+  .bg-accent-navy {
+    background-color: #1B2A4E;
+  }
+
+  .border-accent-gold {
+    border-color: #D4AF37;
+  }
+
+  .border-accent-rose {
+    border-color: #F9A8D4;
+  }
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar with brand colors */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-navy-900;
+  background-color: #1B2A4E;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-gold-500/50 rounded-full;
+  background-color: rgba(212, 175, 55, 0.5);
+  border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-gold-500/70;
+  background-color: rgba(212, 175, 55, 0.7);
+}
+
+/* Selection colors */
+::selection {
+  background-color: #D4AF37;
+  color: #1B2A4E;
+}
+
+::-moz-selection {
+  background-color: #D4AF37;
+  color: #1B2A4E;
 }

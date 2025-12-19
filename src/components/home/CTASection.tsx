@@ -3,18 +3,24 @@ import { MessageCircle, ArrowRight } from 'lucide-react'
 
 export default function CTASection() {
   return (
-    <section className="py-24 bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 relative overflow-hidden">
-      {/* Background decorations */}
+    <section 
+      className="py-24 relative overflow-hidden"
+      style={{ background: 'linear-gradient(to bottom right, #243469, #1B2A4E, #243469)' }}
+    >
+      {/* Background decorations - Dourado e Rosa */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full blur-3xl" style={{ backgroundColor: 'rgba(212, 175, 55, 0.05)' }} />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 rounded-full blur-3xl" style={{ backgroundColor: 'rgba(249, 168, 212, 0.05)' }} />
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-gold-500/10 border border-gold-500/20 rounded-full px-4 py-2 mb-6">
-          <span className="w-2 h-2 bg-gold-500 rounded-full animate-pulse" />
-          <span className="text-gold-500 text-sm font-medium">
+        {/* Badge - Rosa #F9A8D4 */}
+        <div 
+          className="inline-flex items-center gap-2 rounded-full px-4 py-2 mb-6"
+          style={{ backgroundColor: 'rgba(249, 168, 212, 0.1)', border: '1px solid rgba(249, 168, 212, 0.2)' }}
+        >
+          <span className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: '#F9A8D4' }} />
+          <span className="text-sm font-medium" style={{ color: '#F9A8D4' }}>
             Avaliação Gratuita
           </span>
         </div>
@@ -22,11 +28,11 @@ export default function CTASection() {
         {/* Heading */}
         <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
           Pronto para transformar sua{' '}
-          <span className="text-gold-500">autoestima</span>?
+          <span style={{ color: '#D4AF37' }}>autoestima</span>?
         </h2>
 
         {/* Subtitle */}
-        <p className="text-navy-200 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+        <p className="text-lg md:text-xl mb-10 max-w-2xl mx-auto" style={{ color: '#c5cce0' }}>
           Agende sua avaliação gratuita e descubra como podemos ajudá-lo a se
           sentir mais confiante
         </p>
@@ -45,7 +51,7 @@ export default function CTASection() {
         </div>
 
         {/* Trust badges */}
-        <div className="mt-12 flex flex-wrap justify-center gap-8 text-navy-400 text-sm">
+        <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm" style={{ color: '#7989bc' }}>
           <span className="flex items-center gap-2">
             <span className="w-2 h-2 bg-green-500 rounded-full" />
             Atendimento Imediato

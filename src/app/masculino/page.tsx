@@ -7,7 +7,7 @@ import FAQAccordion from '@/components/landing/FAQAccordion'
 import FinalCTA from '@/components/landing/FinalCTA'
 
 export const metadata: Metadata = {
-  title: 'Harmonização Íntima Masculina | Método Intimax | Instituto Rodovanski',
+  title: 'Harmonização Íntima Masculina | Método Intimax | Instituto Goldstein',
   description: 'Harmonização Íntima Masculina com Método Intimax. Aumento de 1-4cm, zero perda de sensibilidade, procedimento não-cirúrgico. Resultado dura 12-24 meses. Agende sua avaliação.',
   keywords: 'harmonização íntima masculina, preenchimento peniano, aumento peniano, método intimax, harmonização masculina',
 }
@@ -80,7 +80,7 @@ export default function MasculinoPage() {
         ctaText="QUERO SABER MAIS"
         ctaLink="https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre a Harmonização Íntima Masculina."
         imageSrc="/images/ByJhon12.25-04.jpeg"
-        imageAlt="Dra. Karina Rodovansky - Harmonização Íntima Masculina"
+        imageAlt="Dra. Karina Goldstein - Harmonização Íntima Masculina"
       />
 
       <ProblemSection

@@ -24,14 +24,14 @@ const locations: Location[] = [
 
 export default function LocationsSection() {
   return (
-    <section className="py-24 bg-navy-900/50">
+    <section className="py-24" style={{ backgroundColor: 'rgba(27, 42, 78, 0.5)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-            Nossas <span className="text-gold-500">Unidades</span>
+            Nossas <span style={{ color: '#D4AF37' }}>Unidades</span>
           </h2>
-          <p className="text-navy-300 text-lg max-w-2xl mx-auto">
+          <p className="text-lg max-w-2xl mx-auto" style={{ color: '#9faace' }}>
             Duas clínicas premium para melhor atendê-lo em São Paulo e Belo
             Horizonte
           </p>
@@ -42,12 +42,19 @@ export default function LocationsSection() {
           {locations.map((location, index) => (
             <div
               key={index}
-              className="bg-navy-800 rounded-3xl p-8 border border-gold-500/10 hover:border-gold-500/30 transition-all"
+              className="rounded-3xl p-8 transition-all"
+              style={{ 
+                backgroundColor: '#243469', 
+                border: '1px solid rgba(212, 175, 55, 0.1)' 
+              }}
             >
               {/* City Header */}
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center">
-                  <MapPin className="w-6 h-6 text-gold-500" />
+                <div 
+                  className="w-12 h-12 rounded-xl flex items-center justify-center"
+                  style={{ backgroundColor: 'rgba(212, 175, 55, 0.1)' }}
+                >
+                  <MapPin className="w-6 h-6" style={{ color: '#D4AF37' }} />
                 </div>
                 <h3 className="font-heading text-2xl font-bold text-white">
                   {location.city}
@@ -55,14 +62,15 @@ export default function LocationsSection() {
               </div>
 
               {/* Address */}
-              <p className="text-navy-200 mb-4 pl-16">{location.address}</p>
+              <p className="mb-4 pl-16" style={{ color: '#c5cce0' }}>{location.address}</p>
 
               {/* Phone */}
               <div className="flex items-center gap-3 mb-6 pl-16">
-                <Phone className="w-4 h-4 text-gold-500" />
+                <Phone className="w-4 h-4" style={{ color: '#F9A8D4' }} />
                 <a
                   href={`tel:${location.phone.replace(/\D/g, '')}`}
-                  className="text-gold-500 hover:text-gold-400 transition-colors"
+                  className="transition-colors"
+                  style={{ color: '#F9A8D4' }}
                 >
                   {location.phone}
                 </a>
@@ -73,7 +81,8 @@ export default function LocationsSection() {
                 href={location.mapsLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-gold-500 font-medium hover:gap-3 transition-all pl-16"
+                className="inline-flex items-center gap-2 font-medium hover:gap-3 transition-all pl-16"
+                style={{ color: '#D4AF37' }}
               >
                 Ver no Google Maps
                 <ExternalLink className="w-4 h-4" />

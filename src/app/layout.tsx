@@ -5,11 +5,11 @@ import Footer from '@/components/layout/Footer'
 import WhatsAppButton from '@/components/layout/WhatsAppButton'
 
 export const metadata: Metadata = {
-  title: 'Instituto Rodovanski | Harmonização Íntima e Estética',
-  description: 'Clínica de estética premium especializada em Harmonização Íntima Masculina e Feminina, Preenchimento de Glúteos e Harmonização Facial. Dra. Karina Rodovansky - São Paulo e Belo Horizonte.',
-  keywords: 'harmonização íntima, harmonização masculina, preenchimento peniano, estética íntima, Dra. Karina Rodovansky, método intimax',
+  title: 'Instituto Goldstein | Harmonização Íntima e Estética',
+  description: 'Clínica de estética premium especializada em Harmonização Íntima Masculina e Feminina, Preenchimento de Glúteos e Harmonização Facial. Dra. Karina Goldstein - São Paulo e Belo Horizonte.',
+  keywords: 'harmonização íntima, harmonização masculina, preenchimento peniano, estética íntima, Dra. Karina Goldstein, método intimax',
   openGraph: {
-    title: 'Instituto Rodovanski | Harmonização Íntima e Estética',
+    title: 'Instituto Goldstein | Harmonização Íntima e Estética',
     description: 'Transformação com naturalidade, técnica e discrição. Procedimentos estéticos de alta precisão.',
     type: 'website',
   },

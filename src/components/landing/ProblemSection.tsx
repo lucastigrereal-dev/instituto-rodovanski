@@ -17,7 +17,7 @@ export default function ProblemSection({
   problems,
 }: ProblemSectionProps) {
   return (
-    <section className="py-24 bg-navy-900/50">
+    <section className="py-24" style={{ backgroundColor: 'rgba(27, 42, 78, 0.5)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
@@ -25,7 +25,7 @@ export default function ProblemSection({
             {title}
           </h2>
           {subtitle && (
-            <p className="text-navy-300 text-lg max-w-2xl mx-auto">
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: '#9faace' }}>
               {subtitle}
             </p>
           )}
@@ -36,15 +36,22 @@ export default function ProblemSection({
           {problems.map((problem, index) => (
             <div
               key={index}
-              className="bg-navy-800/50 rounded-2xl p-6 border border-red-500/10 hover:border-gold-500/30 transition-all group"
+              className="rounded-2xl p-6 transition-all group"
+              style={{ 
+                backgroundColor: 'rgba(36, 52, 105, 0.5)', 
+                border: '1px solid rgba(249, 168, 212, 0.1)' 
+              }}
             >
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 rounded-full bg-red-500/10 flex items-center justify-center flex-shrink-0 group-hover:bg-gold-500/10 transition-colors">
-                  <span className="text-red-400 group-hover:text-gold-500 transition-colors">
+                <div 
+                  className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-colors"
+                  style={{ backgroundColor: 'rgba(249, 168, 212, 0.1)' }}
+                >
+                  <span style={{ color: '#F9A8D4' }}>
                     ?
                   </span>
                 </div>
-                <p className="text-navy-200 group-hover:text-white transition-colors">
+                <p className="transition-colors group-hover:text-white" style={{ color: '#c5cce0' }}>
                   {problem.text}
                 </p>
               </div>
